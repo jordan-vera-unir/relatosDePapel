@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import booksData from "../../data/books.json";
 import { useCarrito } from "../../context/CarritoContext";
 import "./ListaProductos.css";
+import { useNavigate } from "react-router";
 
 const ListaProductos = () => {
   const [productos] = useState(booksData);
+  const navigate = useNavigate();
   const { agregarCarrito } = useCarrito();
 
   return (
@@ -26,7 +28,7 @@ const ListaProductos = () => {
             <p className="libro-precio">${libro.price}</p>
             <button
               className="boton-comprar"
-              onClick={() => alert(`Ir al detalle: ${libro.title}`)}
+              onClick={() => navigate(`/book/${libro.id}`)}
             >
               Ver detalle
             </button>

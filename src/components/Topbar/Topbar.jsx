@@ -46,7 +46,7 @@ function Topbar() {
         <input
           type="text"
           className="topbar__search-input"
-          placeholder="Buscar títulos, autores..."
+          placeholder="Buscar por título"
         />
       </div>
 

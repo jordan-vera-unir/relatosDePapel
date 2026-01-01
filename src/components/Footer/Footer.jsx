@@ -139,7 +139,7 @@ function Footer() {
 
       <div className="footer__bottom">
         <p className="footer__copyright">
-          © {new Date().getFullYear()} Forest Books. Todos los derechos
+          © {new Date().getFullYear()} Relatos de Papel. Todos los derechos
           reservados.
         </p>
         <div className="footer__legal">
