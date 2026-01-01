@@ -1,118 +1,122 @@
 .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: var(--forest-text-dark); /* Fallback */
-    font-family: var(--font-body); /* Fuente base para toda la sección */
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--forest-text-dark); /* Fallback */
+  font-family: var(--font-body); /* Fuente base para toda la sección */
 }
 
 .hero__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(0.5) sepia(0.2); /* Añadimos un toque sepia para calidez */
-    animation: slowZoom 20s infinite alternate ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.5) sepia(0.2); /* Añadimos un toque sepia para calidez */
+  animation: slowZoom 20s infinite alternate ease-in-out;
 }
 
 .hero__overlay {
-    position: absolute;
-    inset: 0;
-    /* Gradiente que va desde el verde bosque profundo */
-    background: linear-gradient(
-            to bottom,
-            rgba(6, 78, 59, 0.4),
-            rgba(26, 47, 35, 0.8)
-    );
-    z-index: 2;
+  position: absolute;
+  inset: 0;
+  /* Gradiente que va desde el verde bosque profundo */
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 78, 59, 0.4),
+    rgba(26, 47, 35, 0.8)
+  );
+  z-index: 2;
 }
 
 .hero__content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    max-width: 900px;
-    padding: 0 24px;
-    color: var(--forest-paper);
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+  color: var(--forest-paper);
 }
 
 .hero__badge {
-    display: inline-block;
-    padding: 6px 20px;
-    background: rgba(188, 138, 95, 0.2);
-    border: 1px solid var(--forest-accent);
-    color: var(--forest-accent);
-    border-radius: 4px; /* Menos redondeado para estilo clásico */
-    font-size: 0.85rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    letter-spacing: var(--ls-wide);
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+  display: inline-block;
+  padding: 6px 20px;
+  background: rgba(188, 138, 95, 0.2);
+  border: 1px solid var(--forest-accent);
+  color: var(--forest-accent);
+  border-radius: 4px; /* Menos redondeado para estilo clásico */
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 .hero__title {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    line-height: 1.05;
-    margin-bottom: 1.5rem;
-    color: var(--forest-paper);
-    font-family: var(--font-heading);
-    letter-spacing: var(--ls-tight);
-    /* Usamos font-weight 700 para que el título tenga fuerza */
-    font-weight: 700;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: var(--forest-paper);
+  font-family: var(--font-heading);
+  letter-spacing: var(--ls-tight);
+  /* Usamos font-weight 700 para que el título tenga fuerza */
+  font-weight: 700;
 }
 
 .hero__title-highlight {
-    color: var(--forest-accent);
-    font-style: italic; /* Toque elegante para el Top 3 */
+  color: var(--forest-accent);
+  font-style: italic; /* Toque elegante para el Top 3 */
 }
 
 .hero__description {
-    font-size: 1.35rem;
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-    color: rgba(253, 252, 240, 0.8);
-    font-family: var(--font-body);
-    font-weight: 400;
-    /* Un interlineado de 1.6 es clave para que se sienta "literario" */
-    line-height: 1.6;
+  font-size: 1.35rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  color: rgba(253, 252, 240, 0.8);
+  font-family: var(--font-body);
+  font-weight: 400;
+  /* Un interlineado de 1.6 es clave para que se sienta "literario" */
+  line-height: 1.6;
 }
 
 .hero__button {
-    cursor: pointer;
-    border: none;
-    padding: 20px 48px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    transition: var(--transition-base);
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--font-body);
-    font-weight: 600;
-    letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  padding: 20px 48px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .hero__button--primary {
-    background-color: var(--forest-accent);
-    color: var(--forest-paper);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--forest-accent);
+  color: var(--forest-paper);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero__button--primary:hover {
-    background-color: var(--forest-accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background-color: var(--forest-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes slowZoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.15); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
 }

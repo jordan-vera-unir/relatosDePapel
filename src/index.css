@@ -1,30 +1,30 @@
 :root {
-    /* Colores Forest Reader */
-    --forest-primary: #064e3b; /* Verde Bosque Profundo */
-    --forest-accent: #bc8a5f; /* Tono Cuero / Siena */
-    --forest-accent-hover: #a6764d; /* Cuero más oscuro para hover */
-    --forest-paper: #fdfcf0; /* Crema Papel Antiguo */
-    --forest-text-dark: #1a2f23; /* Verde casi negro para textos */
+  /* Colores Forest Reader */
+  --forest-primary: #064e3b; /* Verde Bosque Profundo */
+  --forest-accent: #bc8a5f; /* Tono Cuero / Siena */
+  --forest-accent-hover: #a6764d; /* Cuero más oscuro para hover */
+  --forest-paper: #fdfcf0; /* Crema Papel Antiguo */
+  --forest-text-dark: #1a2f23; /* Verde casi negro para textos */
 
-    /* Configuraciones */
-    --transition-base: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Configuraciones */
+  --transition-base: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Definición de Tipografías */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lora', serif;
+  /* Definición de Tipografías */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lora", serif;
 
-    /* Ajustes de legibilidad */
-    --ls-tight: -0.02em;
-    --ls-wide: 0.1em;
+  /* Ajustes de legibilidad */
+  --ls-tight: -0.02em;
+  --ls-wide: 0.1em;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
