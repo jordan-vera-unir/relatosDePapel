@@ -20,7 +20,7 @@
   border-radius: 12px;
   background-color: #fff;
   transition: transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tarjeta-libro:hover {
@@ -44,14 +44,15 @@
 .boton-comprar {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #1a2f23;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 2px;
 }
 
 .boton-comprar:hover {
-  background-color: #0056b3;
+  background-color: #bc8a5f;
 }

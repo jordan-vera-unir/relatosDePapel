@@ -7,12 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(
-    26,
-    47,
-    35,
-    0.95
-  );
+  background-color: rgba(26, 47, 35, 0.95);
   backdrop-filter: blur(8px);
   padding: 0.8rem 2rem;
   border-bottom: 1px solid rgba(253, 252, 240, 0.1);
@@ -112,7 +107,6 @@
   justify-content: center;
   border: 2px solid var(--forest-text-dark);
 }
-
 
 @media (max-width: 768px) {
   .topbar {

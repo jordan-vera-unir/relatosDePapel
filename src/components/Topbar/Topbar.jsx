@@ -1,7 +1,10 @@
 import React from "react";
 import "./Topbar.css";
+import { useCarrito } from "../../../src/context/CarritoContext";
 
 function Topbar() {
+  const { mostrarModal, carrito } = useCarrito();
+
   return (
     <header className="topbar">
       <a href="/" className="topbar__logo">
@@ -51,6 +54,7 @@ function Topbar() {
         <button
           className="topbar__cart-button"
           aria-label="Ver carrito de compras"
+          onClick={mostrarModal}
         >
           <svg
             width="24"
@@ -69,7 +73,7 @@ function Topbar() {
             <path d="M6 5l14 1l-1 7h-13" />
           </svg>
           {/* Badge de contador de items (ejemplo estático) */}
-          <span className="topbar__cart-badge">3</span>
+          <span className="topbar__cart-badge">{carrito.length}</span>
         </button>
       </div>
     </header>
