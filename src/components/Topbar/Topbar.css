@@ -1,0 +1,129 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(
+    26,
+    47,
+    35,
+    0.95
+  );
+  backdrop-filter: blur(8px);
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid rgba(253, 252, 240, 0.1);
+  color: var(--forest-paper);
+  box-sizing: border-box;
+}
+
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.topbar__logo-icon {
+  color: var(--forest-accent);
+}
+
+.topbar__logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.topbar__search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 2rem;
+}
+
+.topbar__search-input {
+  width: 100%;
+  padding: 10px 16px 10px 44px;
+  border-radius: 50px;
+  border: 1px solid rgba(253, 252, 240, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--forest-paper);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.topbar__search-input::placeholder {
+  color: rgba(253, 252, 240, 0.5);
+}
+
+.topbar__search-input:focus {
+  outline: none;
+  border-color: var(--forest-accent);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topbar__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(253, 252, 240, 0.5);
+  pointer-events: none;
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+.topbar__cart-button {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--forest-paper);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.3s ease;
+}
+
+.topbar__cart-button:hover {
+  color: var(--forest-accent);
+}
+
+.topbar__cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef4444; /* Rojo vibrante para notificaciones */
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--forest-text-dark);
+}
+
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .topbar__logo-text {
+    display: none;
+  }
+
+  .topbar__search-container {
+    margin: 0 1rem;
+  }
+}
