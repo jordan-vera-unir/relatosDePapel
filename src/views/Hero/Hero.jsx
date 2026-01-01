@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 import "./Hero.css";
 
 function Hero() {
+  const navigate = useNavigate();
   const bgImage =
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2000&auto=format&fit=crop";
+
+  const handleClick = () => {
+    navigate("/home");
+  };
 
   return (
     <main className="hero">
@@ -26,21 +32,11 @@ function Hero() {
           perdura en el tiempo.
         </p>
 
-        <button className="hero__button hero__button--primary">
-          Adquirir Colección
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
-            <path d="M6 2v18" />
-          </svg>
+        <button
+          className="hero__button hero__button--primary"
+          onClick={handleClick}
+        >
+          Ver Colección
         </button>
       </div>
     </main>
