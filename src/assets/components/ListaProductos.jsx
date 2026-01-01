@@ -1,29 +1,39 @@
-import React, { useState } from 'react';
-import booksData from '../../data/books.json'; 
-import './ListaProductos.css';
+import React, { useState } from "react";
+import booksData from "../../data/books.json";
+import "./ListaProductos.css";
+import { useNavigate } from "react-router";
 
 const ListaProductos = () => {
   const [productos] = useState(booksData);
+  const navigate = useNavigate();
 
   return (
     <div className="catalogo-container">
       <h1 className="catalogo-titulo">Relatos de Papel</h1>
-      
+
       <div className="grid-libros">
         {productos.map((libro) => (
           <div key={libro.id} className="tarjeta-libro">
-            <img 
-              src={libro.coverImage} 
-              alt={libro.title} 
-              className="libro-imagen" 
+            <img
+              src={libro.coverImage}
+              alt={libro.title}
+              className="libro-imagen"
             />
             <h3>{libro.title}</h3>
-            <p><strong>Autor:</strong> {libro.author}</p>
+            <p>
+              <strong>Autor:</strong> {libro.author}
+            </p>
             <p className="libro-precio">${libro.price}</p>
-            <button className="boton-comprar" onClick={() => alert(`Ir al detalle de: ${libro.title}`)} >
+            <button
+              className="boton-comprar"
+              onClick={() => navigate(`/book/${libro.id}`)}
+            >
               Ver detalle
             </button>
-            <button className="boton-comprar" onClick={() => alert(`Añadido al carrito: ${libro.title}`)} >
+            <button
+              className="boton-comprar"
+              onClick={() => alert(`Añadido al carrito: ${libro.title}`)}
+            >
               Comprar
             </button>
           </div>
