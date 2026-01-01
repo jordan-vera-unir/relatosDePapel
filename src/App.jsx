@@ -1,12 +1,16 @@
-import './App.css'
+import {BrowserRouter, Route, Routes} from "react-router";
+
 import Hero from "./views/Hero/Hero.jsx";
+import './App.css'
 
 function App() {
     return (
-        <>
-            <h1>App</h1>
-            <Hero/>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="" element={<Hero/>} />
+                <Route path="/home" element={this} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

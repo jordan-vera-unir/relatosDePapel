@@ -7,7 +7,7 @@
     justify-content: center;
     overflow: hidden;
     background-color: var(--forest-text-dark); /* Fallback */
-    font-family: 'Georgia', serif; /* Cambiamos a serif para el estilo Forest Reader */
+    font-family: var(--font-body); /* Fuente base para toda la sección */
 }
 
 .hero__background {
@@ -51,18 +51,22 @@
     color: var(--forest-accent);
     border-radius: 4px; /* Menos redondeado para estilo clásico */
     font-size: 0.85rem;
-    font-family: sans-serif;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: var(--ls-wide);
     text-transform: uppercase;
-    letter-spacing: 3px;
     margin-bottom: 2rem;
 }
 
 .hero__title {
     font-size: clamp(3rem, 10vw, 5.5rem);
-    font-weight: 700;
     line-height: 1.05;
     margin-bottom: 1.5rem;
     color: var(--forest-paper);
+    font-family: var(--font-heading);
+    letter-spacing: var(--ls-tight);
+    /* Usamos font-weight 700 para que el título tenga fuerza */
+    font-weight: 700;
 }
 
 .hero__title-highlight {
@@ -74,8 +78,11 @@
     font-size: 1.35rem;
     max-width: 600px;
     margin: 0 auto 3rem auto;
-    line-height: 1.6;
     color: rgba(253, 252, 240, 0.8);
+    font-family: var(--font-body);
+    font-weight: 400;
+    /* Un interlineado de 1.6 es clave para que se sienta "literario" */
+    line-height: 1.6;
 }
 
 .hero__button {
@@ -83,13 +90,14 @@
     border: none;
     padding: 20px 48px;
     font-size: 1.1rem;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
     transition: var(--transition-base);
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .hero__button--primary {

@@ -8,9 +8,23 @@
 
     /* Configuraciones */
     --transition-base: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Definición de Tipografías */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
+
+    /* Ajustes de legibilidad */
+    --ls-tight: -0.02em;
+    --ls-wide: 0.1em;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
