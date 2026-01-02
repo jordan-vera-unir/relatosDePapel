@@ -1,20 +1,20 @@
-.catalogo-container {
+.catalogo__container {
   padding: 20px;
 }
 
-.catalogo-titulo {
+.catalogo__titulo {
   text-align: center;
   margin-bottom: 30px;
   color: #333;
 }
 
-.grid-libros {
+.grid__libros {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 25px;
 }
 
-.tarjeta-libro {
+.tarjeta__libro {
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 12px;
@@ -23,11 +23,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta-libro:hover {
+.tarjeta__libro:hover {
   transform: translateY(-5px);
 }
 
-.libro-imagen {
+.libro__imagen {
   width: 100%;
   height: 280px;
   object-fit: cover;
@@ -35,13 +35,13 @@
   margin-bottom: 12px;
 }
 
-.libro-precio {
+.libro__precio {
   color: #2c3e50;
   font-size: 1.2rem;
   margin: 10px 0;
 }
 
-.boton-comprar {
+.boton__comprar {
   width: 100%;
   padding: 10px;
   background-color: #1a2f23;
@@ -53,6 +53,6 @@
   margin-top: 2px;
 }
 
-.boton-comprar:hover {
+.boton__comprar:hover {
   background-color: #bc8a5f;
 }

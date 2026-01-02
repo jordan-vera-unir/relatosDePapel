@@ -19,30 +19,30 @@ const ListaProductos = () => {
   );
 
   return (
-    <div className="catalogo-container">
-      <h1 className="catalogo-titulo">Relatos de Papel</h1>
+    <div className="catalogo__container">
+      <h1 className="catalogo__titulo">Relatos de Papel</h1>
 
-      <div className="grid-libros">
+      <div className="grid__libros">
         {productosFiltrados.map((libro) => (
-          <div key={libro.id} className="tarjeta-libro">
+          <div key={libro.id} className="tarjeta__libro">
             <img
               src={libro.coverImage}
               alt={libro.title}
-              className="libro-imagen"
+              className="libro__imagen"
             />
             <h3>{libro.title}</h3>
             <p>
               <strong>Autor:</strong> {libro.author}
             </p>
-            <p className="libro-precio">${libro.price}</p>
+            <p className="libro__precio">${libro.price}</p>
             <button
-              className="boton-comprar"
+              className="boton__comprar"
               onClick={() => navigate(`/book/${libro.id}`)}
             >
               Ver detalle
             </button>
             <button
-              className="boton-comprar"
+              className="boton__comprar"
               onClick={() => agregarCarrito(carritoKey, libro)}
             >
               Añadir al carrito

@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
     47,
     35,
     0.85
-  ); /* Usamos el verde dominante con transparencia */
+  );
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-.modal-content {
+.modal__content {
   background: #ffffff;
   padding: 30px;
   border-radius: 15px;
@@ -27,22 +27,21 @@
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
-  /* Sutil borde con el color secundario */
   border: 2px solid #bc8a5f;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content h2 {
+.modal__content h2 {
   margin-top: 0;
-  color: #1a2f23; /* Verde dominante para el título */
-  font-family: "Playfair Display", serif; /* Opcional: una fuente elegante */
+  color: #1a2f23; 
+  font-family: "Playfair Display", serif;
   font-size: 1.8rem;
-  border-bottom: 1px solid #bc8a5f; /* Línea divisoria dorada */
+  border-bottom: 1px solid #bc8a5f;
   padding-bottom: 15px;
   text-align: center;
 }
 
-.close-button {
+.close__button {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -57,12 +56,12 @@
   transition: all 0.3s ease;
 }
 
-.close-button:hover {
+.close__button:hover {
   background: #bc8a5f;
   color: white;
 }
 
-.modal-content li {
+.modal__content li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,20 +71,19 @@
   font-weight: 500;
 }
 
-.modal-footer {
+.modal__footer {
   margin-top: 25px;
   text-align: center;
 }
 
-.modal-footer p {
+.modal__footer p {
   font-size: 1.4rem;
   font-weight: bold;
   color: #1a2f23;
   margin-bottom: 15px;
 }
 
-/* Botón principal con el color secundario */
-.modal-footer button {
+.modal__footer button {
   width: 100%;
   padding: 14px;
   background-color: #bc8a5f;
@@ -100,8 +98,8 @@
   transition: background 0.3s ease;
 }
 
-.modal-footer button:hover {
-  background-color: #1a2f23; /* Cambio al verde dominante al pasar el mouse */
+.modal__footer button:hover {
+  background-color: #1a2f23;
 }
 
 @keyframes fadeIn {

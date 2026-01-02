@@ -14,10 +14,10 @@ const CarritotModal = () => {
   if (!esModalAbierto) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
+    <div className="modal">
+      <div className="modal__content">
         <h2>Tu Carrito ({carrito.length})</h2>
-        <button className="close-button" onClick={mostrarModal}>
+        <button className="close__button" onClick={mostrarModal}>
           X
         </button>
         {carrito.length === 0 ? (
@@ -30,14 +30,14 @@ const CarritotModal = () => {
                 <button
                   onClick={() => eliminarLibro(carritoKey, item.idCompra)}
                 >
-                  Eliminar
+                  🗑️ Eliminar
                 </button>
               </li>
             ))}
           </ul>
         )}
 
-        <div className="modal-footer">
+        <div className="modal__footer">
           <p>
             Total: $
             {carrito.reduce((acc, item) => acc + item.price, 0).toFixed(2)}
