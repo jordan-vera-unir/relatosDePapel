@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Topbar.css";
-import { useCarrito } from "../../../src/context/CarritoContext";
-
+import { GlobalContext } from "../../context/GlobalContext";
 
 function Topbar() {
-  const { mostrarModal, carrito } = useCarrito();
+
+  const {carrito, mostrarModal } = useContext(GlobalContext);
 
   return (
     <header className="topbar">

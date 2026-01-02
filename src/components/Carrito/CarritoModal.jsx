@@ -1,20 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./CarritoModal.css";
-import { useCarrito } from "../../context/CarritoContext";
+import { useCarrito } from "../../hooks/useCarrito";
+import { GlobalContext } from "../../context/GlobalContext";
 
 const CarritotModal = () => {
-  const { carrito, esModalAbierto, mostrarModal, eliminarDelCarrito } = useCarrito();
+  const { eliminarLibro } = useCarrito();
+  const carritoKey = "carritoKey";
 
+  const { carrito, esModalAbierto, mostrarModal } = useContext(GlobalContext);
+  
   if (!esModalAbierto) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
         <h2>Tu Carrito ({carrito.length})</h2>
-        <button className="close-button" onClick={mostrarModal}>
+         <button className="close-button" onClick={mostrarModal}>
           X
         </button>
-
         {carrito.length === 0 ? (
           <p>El carrito está vacío</p>
         ) : (
@@ -22,16 +25,16 @@ const CarritotModal = () => {
             {carrito.map((item, index) => (
               <li key={index}>
                 {item.title} - ${item.price}
-                <button className="boton-eliminar" onClick={() => eliminarDelCarrito(index)}>🗑️ Eliminar</button>
+                <button onClick={() => eliminarLibro(carritoKey, item.idCompra)}>
+                   Eliminar
+                </button>
               </li>
             ))}
           </ul>
         )}
+
         <div className="modal-footer">
-          <p>
-            Total: $
-            {carrito.reduce((acc, item) => acc + item.price, 0).toFixed(2)}
-          </p>
+          <p>Total: ${carrito.reduce((acc, item) => acc + item.price, 0).toFixed(2)}</p>
           <button>Finalizar Compra</button>
         </div>
       </div>

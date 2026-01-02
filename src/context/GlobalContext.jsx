@@ -6,9 +6,21 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [books] = useState(booksData);
+  const [esModalAbierto, setEsModalAbierto] = useState(false);
+  const mostrarModal = () => setEsModalAbierto(!esModalAbierto);
 
+  const [carrito, setCarrito] = useState(() => {
+    try {
+      const item = localStorage.getItem("carritoKey");
+      return item ? JSON.parse(item) : [];
+    } catch (error) {
+      console.log(error)
+      return [];
+    }
+  });
+  
   return (
-    <GlobalContext.Provider value={{ books }}>
+    <GlobalContext.Provider value={{ books, mostrarModal, esModalAbierto, carrito, setCarrito }}>
       {children}
     </GlobalContext.Provider>
   );

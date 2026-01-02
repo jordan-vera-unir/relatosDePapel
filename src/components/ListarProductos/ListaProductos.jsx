@@ -1,7 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router";
-import { useCarrito } from "../../context/CarritoContext";
 import "./ListaProductos.css";
+import { useNavigate } from "react-router";
+import { useCarrito } from "../../hooks/useCarrito";
 import { useBooks } from "../../hooks/useBooks.js";
 
 const ListaProductos = () => {
@@ -9,11 +8,8 @@ const ListaProductos = () => {
   const productos = getAllBooks();
   const navigate = useNavigate();
   const { agregarCarrito } = useCarrito();
-  //const [busqueda, setBusqueda] = useState("");
 
-  /*const productosFiltrados = productos.filter((libro) =>
-    libro.title.toLowerCase().includes(busqueda.toLowerCase())
-  );*/
+  const carritoKey = "carritoKey";
 
   return (
     <div className="catalogo-container">
@@ -40,7 +36,7 @@ const ListaProductos = () => {
             </button>
             <button
               className="boton-comprar"
-              onClick={() => agregarCarrito(libro)}
+              onClick={() => agregarCarrito(carritoKey, libro)}
             >
               Comprar
             </button>
