@@ -69,9 +69,6 @@ function BookDetail() {
             <button className="book-detail__button book-detail__button--primary">
               Añadir al Carrito
             </button>
-            <button className="book-detail__button book-detail__button--outline">
-              Lista de Deseos
-            </button>
           </div>
 
           <div className="book-detail__specs">

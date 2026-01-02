@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import "./Hero.css";
@@ -8,17 +8,19 @@ function Hero() {
   const bgImage =
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2000&auto=format&fit=crop";
 
-  const handleClick = () => {
-    navigate("/home");
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/home");
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <main className="hero">
-      {/* Background & Overlay */}
       <img src={bgImage} alt="Ancient Library" className="hero__background" />
       <div className="hero__overlay"></div>
 
-      {/* Main Content */}
       <div className="hero__content">
         <span className="hero__badge">Curaduría de Invierno</span>
 
@@ -34,7 +36,7 @@ function Hero() {
 
         <button
           className="hero__button hero__button--primary"
-          onClick={handleClick}
+          onClick={() => navigate("/home")}
         >
           Ver Colección
         </button>

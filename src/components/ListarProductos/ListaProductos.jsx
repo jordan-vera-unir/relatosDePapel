@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import booksData from "../../data/books.json";
+import React from "react";
+import { useNavigate } from "react-router";
 import { useCarrito } from "../../context/CarritoContext";
 import "./ListaProductos.css";
-import { useNavigate } from "react-router";
+import { useBooks } from "../../hooks/useBooks.js";
 
 const ListaProductos = () => {
-  const [productos] = useState(booksData);
+  const { getAllBooks } = useBooks();
+  const productos = getAllBooks();
   const navigate = useNavigate();
   const { agregarCarrito } = useCarrito();
   //const [busqueda, setBusqueda] = useState("");
-  
+
   /*const productosFiltrados = productos.filter((libro) =>
     libro.title.toLowerCase().includes(busqueda.toLowerCase())
   );*/

@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: var(--forest-text-dark); /* Fallback */
-  font-family: var(--font-body); /* Fuente base para toda la sección */
+  background-color: var(--forest-text-dark);
+  font-family: var(--font-body);
 }
 
 .hero__background {
@@ -18,14 +18,13 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: brightness(0.5) sepia(0.2); /* Añadimos un toque sepia para calidez */
+  filter: brightness(0.5) sepia(0.2);
   animation: slowZoom 20s infinite alternate ease-in-out;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  /* Gradiente que va desde el verde bosque profundo */
   background: linear-gradient(
     to bottom,
     rgba(6, 78, 59, 0.4),
@@ -49,7 +48,7 @@
   background: rgba(188, 138, 95, 0.2);
   border: 1px solid var(--forest-accent);
   color: var(--forest-accent);
-  border-radius: 4px; /* Menos redondeado para estilo clásico */
+  border-radius: 4px;
   font-size: 0.85rem;
   font-family: var(--font-body);
   font-weight: 600;
@@ -65,13 +64,12 @@
   color: var(--forest-paper);
   font-family: var(--font-heading);
   letter-spacing: var(--ls-tight);
-  /* Usamos font-weight 700 para que el título tenga fuerza */
   font-weight: 700;
 }
 
 .hero__title-highlight {
   color: var(--forest-accent);
-  font-style: italic; /* Toque elegante para el Top 3 */
+  font-style: italic;
 }
 
 .hero__description {
@@ -81,7 +79,6 @@
   color: rgba(253, 252, 240, 0.8);
   font-family: var(--font-body);
   font-weight: 400;
-  /* Un interlineado de 1.6 es clave para que se sienta "literario" */
   line-height: 1.6;
 }
 

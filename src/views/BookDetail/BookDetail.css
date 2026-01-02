@@ -136,12 +136,6 @@
   border: none;
 }
 
-.book-detail__button--outline {
-  background: transparent;
-  color: var(--forest-primary);
-  border: 2px solid var(--forest-primary);
-}
-
 .book-detail__button:hover {
   transform: translateY(-2px);
   opacity: 0.9;
