@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import "./BookDetail.css";
 import { useBooks } from "../../hooks/useBooks.js";
+import { Link } from "react-router-dom";
 
 function BookDetail() {
   const { id } = useParams();
@@ -38,7 +39,7 @@ function BookDetail() {
 
         <div className="book-detail__info">
           <nav className="book-detail__breadcrumb">
-            <a href="/">Catálogo</a> / <span>{book.genres[0]}</span>
+            <Link to="/home">Catálogo</Link> / <span>{book.genres[0]}</span>
           </nav>
 
           <h1 className="book-detail__title">{book.title}</h1>
