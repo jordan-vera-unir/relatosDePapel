@@ -5,6 +5,7 @@ import Home from "./views/Home/Home.jsx";
 import BookDetail from "./views/BookDetail/BookDetail.jsx";
 import { GlobalProvider } from "./context/GlobalContext.jsx";
 import Checkout from "./views/Checkout/Checkout.jsx";
+import NotFound from "./views/NotFound/NotFound.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/book/:id" element={<BookDetail />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </GlobalProvider>
