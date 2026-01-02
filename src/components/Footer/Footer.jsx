@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -30,7 +31,11 @@ function Footer() {
             biblioteca personal desde 2004.
           </p>
           <div className="footer__social">
-            <a href="#" className="footer__social-link" aria-label="Twitter">
+            <Link
+              to="/home"
+              className="footer__social-link"
+              aria-label="Twitter"
+            >
               <svg
                 width="20"
                 height="20"
@@ -43,8 +48,12 @@ function Footer() {
               >
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
               </svg>
-            </a>
-            <a href="#" className="footer__social-link" aria-label="Instagram">
+            </Link>
+            <Link
+              to="/home"
+              className="footer__social-link"
+              aria-label="Instagram"
+            >
               <svg
                 width="20"
                 height="20"
@@ -59,7 +68,7 @@ function Footer() {
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -67,24 +76,24 @@ function Footer() {
           <h3 className="footer__title">Navegación</h3>
           <ul className="footer__list">
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Catálogo Completo
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Autores Destacados
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Sobre Nosotros
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -93,24 +102,24 @@ function Footer() {
           <h3 className="footer__title">Soporte</h3>
           <ul className="footer__list">
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Seguimiento de Envío
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Preguntas Frecuentes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Política de Devolución
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link">
+              <Link to="/home" className="footer__link">
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -143,12 +152,12 @@ function Footer() {
           reservados.
         </p>
         <div className="footer__legal">
-          <a href="#" className="footer__link footer__link--small">
+          <Link to="/home" className="footer__link footer__link--small">
             Privacidad
-          </a>
-          <a href="#" className="footer__link footer__link--small">
+          </Link>
+          <Link to="/home" className="footer__link footer__link--small">
             Términos
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

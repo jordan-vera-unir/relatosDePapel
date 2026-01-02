@@ -1,14 +1,15 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./Topbar.css";
 import { GlobalContext } from "../../context/GlobalContext";
+import { Link } from "react-router-dom";
 
 function Topbar() {
-
-  const {carrito, mostrarModal, busqueda, setBusqueda } = useContext(GlobalContext);
+  const { carrito, mostrarModal, busqueda, setBusqueda } =
+    useContext(GlobalContext);
 
   return (
     <header className="topbar">
-      <a href="/" className="topbar__logo">
+      <Link to={"/home"} className="topbar__logo">
         <svg
           className="topbar__logo-icon"
           width="24"
@@ -26,7 +27,7 @@ function Topbar() {
           <path d="M9 8h6" />
         </svg>
         <span className="topbar__logo-text">Relatos de Papel</span>
-      </a>
+      </Link>
 
       <div className="topbar__search-container">
         <svg
