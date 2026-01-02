@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router";
 import { GlobalContext } from "../../context/GlobalContext";
 import SuccessModal from "../../components/SuccessModal/SuccessModal.jsx";
 import { useCarrito } from "../../hooks/useCarrito.js";
@@ -6,6 +7,7 @@ import "./Checkout.css";
 
 function Checkout() {
   const { carrito: cartItems } = useContext(GlobalContext);
+  const navigate = useNavigate();
   const { deleteShoppingCart } = useCarrito();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const carritoKey = "carritoKey";
@@ -35,6 +37,25 @@ function Checkout() {
     <div className="checkout">
       <div className="checkout__container">
         <section className="checkout__form-section">
+          <button
+            className="book-detail__back-btn"
+            onClick={() => navigate("/home")}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Volver al catálogo
+          </button>
           <h2 className="checkout__title">Detalles de Envío</h2>
           <form className="checkout__form" onSubmit={handleSubmit}>
             <div className="checkout__group">

@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import Hero from "./views/Hero/Hero.jsx";
-import "./App.css";
 import Home from "./views/Home/Home.jsx";
 import BookDetail from "./views/BookDetail/BookDetail.jsx";
 import { GlobalProvider } from "./context/GlobalContext.jsx";
