@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { useBooks } from "../../hooks/useBooks.js";
 import { useCarrito } from "../../hooks/useCarrito.js";
@@ -7,6 +7,7 @@ import "./BookDetail.css";
 
 function BookDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { getBookById } = useBooks();
   const book = getBookById(id);
   const carritoKey = "carritoKey";
@@ -41,6 +42,26 @@ function BookDetail() {
         </div>
 
         <div className="book-detail__info">
+          <button
+            className="book-detail__back-btn"
+            onClick={() => navigate(-1)}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Volver al catálogo
+          </button>
+
           <nav className="book-detail__breadcrumb">
             <Link to="/home">Catálogo</Link> / <span>{book.genres[0]}</span>
           </nav>

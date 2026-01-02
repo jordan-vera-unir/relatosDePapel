@@ -174,6 +174,39 @@
   color: var(--forest-text-dark);
 }
 
+.book-detail__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--forest-accent);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-detail__back-btn svg {
+  transition: transform 0.3s ease;
+}
+
+/* Efecto visual: la flecha se mueve a la izquierda al pasar el mouse */
+.book-detail__back-btn:hover {
+  color: var(--forest-text-dark);
+}
+
+.book-detail__back-btn:hover svg {
+  transform: translateX(-5px);
+}
+
 @media (max-width: 992px) {
   .book-detail__container {
     grid-template-columns: 1fr;
@@ -185,5 +218,8 @@
   }
   .book-detail__title {
     font-size: 2.5rem;
+  }
+  .book-detail__back-btn {
+    margin-bottom: 16px;
   }
 }
