@@ -44,8 +44,10 @@ const CarritotModal = () => {
           </p>
           <button
             onClick={() => {
+              mostrarModal();
               navigate("/checkout");
             }}
+            disabled={carrito.length === 0}
           >
             Finalizar Compra
           </button>

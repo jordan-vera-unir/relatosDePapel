@@ -32,6 +32,16 @@ export const useCarrito = () => {
     }
   };
 
+  const deleteShoppingCart = (key) => {
+    try {
+      const newShoppingCart = [];
+      setCarrito(newShoppingCart);
+      localStorage.setItem(key, JSON.stringify(newShoppingCart));
+    } catch (error) {
+      console.error(`Error al vaciar el carrito "${key}":`, error);
+    }
+  };
+
   const obtenerCarrito = (key) => {
     try {
       const item = localStorage.getItem(key);
@@ -53,5 +63,11 @@ export const useCarrito = () => {
     }
   };
 
-  return { agregarCarrito, eliminarLibro, obtenerTamano, obtenerCarrito };
+  return {
+    agregarCarrito,
+    eliminarLibro,
+    obtenerTamano,
+    obtenerCarrito,
+    deleteShoppingCart,
+  };
 };

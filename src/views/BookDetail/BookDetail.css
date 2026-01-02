@@ -198,7 +198,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Efecto visual: la flecha se mueve a la izquierda al pasar el mouse */
 .book-detail__back-btn:hover {
   color: var(--forest-text-dark);
 }

@@ -1,10 +1,14 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import SuccessModal from "../../components/SuccessModal/SuccessModal.jsx";
+import { useCarrito } from "../../hooks/useCarrito.js";
 import "./Checkout.css";
 
 function Checkout() {
   const { carrito: cartItems } = useContext(GlobalContext);
-
+  const { deleteShoppingCart } = useCarrito();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const carritoKey = "carritoKey";
   const subtotal = cartItems.reduce((acc, book) => acc + book.price, 0);
   const shipping = 5.99;
   const total = subtotal + shipping;
@@ -21,12 +25,18 @@ function Checkout() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+    deleteShoppingCart(carritoKey);
+  };
+
   return (
     <div className="checkout">
       <div className="checkout__container">
         <section className="checkout__form-section">
           <h2 className="checkout__title">Detalles de Envío</h2>
-          <form className="checkout__form" onSubmit={(e) => e.preventDefault()}>
+          <form className="checkout__form" onSubmit={handleSubmit}>
             <div className="checkout__group">
               <label className="checkout__label">Correo Electrónico</label>
               <input
@@ -83,6 +93,11 @@ function Checkout() {
             </button>
           </form>
         </section>
+
+        <SuccessModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
 
         <aside className="checkout__summary-section">
           <h2 className="checkout__summary-title">Resumen del Pedido</h2>
