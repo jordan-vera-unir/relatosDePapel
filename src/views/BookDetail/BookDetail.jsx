@@ -1,13 +1,16 @@
 import React from "react";
 import { useParams } from "react-router";
-import "./BookDetail.css";
-import { useBooks } from "../../hooks/useBooks.js";
 import { Link } from "react-router-dom";
+import { useBooks } from "../../hooks/useBooks.js";
+import { useCarrito } from "../../hooks/useCarrito.js";
+import "./BookDetail.css";
 
 function BookDetail() {
   const { id } = useParams();
   const { getBookById } = useBooks();
   const book = getBookById(id);
+  const carritoKey = "carritoKey";
+  const { agregarCarrito } = useCarrito();
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -66,7 +69,10 @@ function BookDetail() {
           </div>
 
           <div className="book-detail__actions">
-            <button className="book-detail__button book-detail__button--primary">
+            <button
+              className="book-detail__button book-detail__button--primary"
+              onClick={() => agregarCarrito(carritoKey, book)}
+            >
               Añadir al Carrito
             </button>
           </div>

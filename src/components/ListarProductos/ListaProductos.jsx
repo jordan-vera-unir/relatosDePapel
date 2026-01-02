@@ -45,7 +45,7 @@ const ListaProductos = () => {
               className="boton-comprar"
               onClick={() => agregarCarrito(carritoKey, libro)}
             >
-              Comprar
+              Añadir al carrito
             </button>
           </div>
         ))}

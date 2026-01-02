@@ -22,7 +22,7 @@ function Hero() {
       <div className="hero__overlay"></div>
 
       <div className="hero__content">
-        <span className="hero__badge">Curaduría de Invierno</span>
+        <span className="hero__badge">Colecciones para Invierno</span>
 
         <h1 className="hero__title">
           Los <span className="hero__title-highlight">Top 3</span> <br />
