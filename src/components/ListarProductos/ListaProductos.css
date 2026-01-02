@@ -5,7 +5,7 @@
 .catalogo__titulo {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--forest-text-dark);
 }
 
 .grid__libros {
@@ -15,10 +15,10 @@
 }
 
 .tarjeta__libro {
-  border: 1px solid #ddd;
+  border: 1px solid var(--forest-paper);
   padding: 15px;
   border-radius: 12px;
-  background-color: #fff;
+  background-color: var(--forest-paper);
   transition: transform 0.2s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -36,7 +36,7 @@
 }
 
 .libro__precio {
-  color: #2c3e50;
+  color: var(--forest-text-dark);
   font-size: 1.2rem;
   margin: 10px 0;
 }
@@ -44,8 +44,8 @@
 .boton__comprar {
   width: 100%;
   padding: 10px;
-  background-color: #1a2f23;
-  color: white;
+  background-color: var(--forest-text-dark);
+  color: var(--forest-paper);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -54,5 +54,5 @@
 }
 
 .boton__comprar:hover {
-  background-color: #bc8a5f;
+  background-color: var(--forest-accent);
 }
