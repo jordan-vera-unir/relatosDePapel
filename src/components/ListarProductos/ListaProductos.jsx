@@ -8,6 +8,11 @@ const ListaProductos = () => {
   const [productos] = useState(booksData);
   const navigate = useNavigate();
   const { agregarCarrito } = useCarrito();
+  //const [busqueda, setBusqueda] = useState("");
+  
+  /*const productosFiltrados = productos.filter((libro) =>
+    libro.title.toLowerCase().includes(busqueda.toLowerCase())
+  );*/
 
   return (
     <div className="catalogo-container">

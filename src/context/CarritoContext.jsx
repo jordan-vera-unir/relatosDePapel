@@ -6,6 +6,7 @@ export const CaritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
   const [esModalAbierto, setEsModalAbierto] = useState(false);
   const mostrarModal = () => setEsModalAbierto(!esModalAbierto);
+  const [busqueda, setBusqueda] = useState("");
 
   const agregarCarrito = (nuevoLibro) => {
     console.log("agrego al carrito");
@@ -26,7 +27,9 @@ export const CaritoProvider = ({ children }) => {
         agregarCarrito,
         esModalAbierto,
         mostrarModal,
-        eliminarDelCarrito
+        eliminarDelCarrito,
+        busqueda,
+        setBusqueda
       }}
     >
       {children}

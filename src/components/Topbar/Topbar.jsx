@@ -2,6 +2,7 @@ import React from "react";
 import "./Topbar.css";
 import { useCarrito } from "../../../src/context/CarritoContext";
 
+
 function Topbar() {
   const { mostrarModal, carrito } = useCarrito();
 
