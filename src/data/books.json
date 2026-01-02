@@ -29,7 +29,7 @@
     "publishedDate": "1949-06-08",
     "rating": 4.8,
     "price": 15.99,
-    "coverImage": "https://images.unsplash.com/photo-1543004218-294b1b810d96?q=80&w=400"
+    "coverImage": "https://images.unsplash.com/photo-1510172951991-856a654063f9?q=80&w=400"
   },
   {
     "id": 3,
@@ -41,7 +41,7 @@
       "width": "13cm"
     },
     "pages": 471,
-    "genres": ["Realismo Mágico", "Clásico"],
+    "genres": ["Realismo Magico", "Clasico"],
     "publishedDate": "1967-05-30",
     "rating": 4.9,
     "price": 22.0,
@@ -57,7 +57,7 @@
       "width": "18cm"
     },
     "pages": 352,
-    "genres": ["Tecnología", "Software"],
+    "genres": ["Tecnologia", "Software"],
     "publishedDate": "1999-10-30",
     "rating": 4.8,
     "price": 42.0,
@@ -65,7 +65,7 @@
   },
   {
     "id": 5,
-    "title": "Hábitos Atómicos",
+    "title": "Habitos Atomicos",
     "author": "James Clear",
     "editorial": "Paidós",
     "dimensions": {
@@ -105,11 +105,11 @@
       "width": "16cm"
     },
     "pages": 1056,
-    "genres": ["Clásico", "Aventura"],
+    "genres": ["Clasico", "Aventura"],
     "publishedDate": "1605-01-16",
     "rating": 4.9,
     "price": 30.0,
-    "coverImage": "https://images.unsplash.com/photo-1532012197367-215981d6399b?q=80&w=400"
+    "coverImage": "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=400"
   },
   {
     "id": 8,
@@ -121,7 +121,7 @@
       "width": "15cm"
     },
     "pages": 496,
-    "genres": ["Historia", "No Ficción"],
+    "genres": ["Historia", "No Ficcion"],
     "publishedDate": "2011-04-01",
     "rating": 4.8,
     "price": 21.9,
@@ -137,7 +137,7 @@
       "width": "12cm"
     },
     "pages": 96,
-    "genres": ["Infantil", "Fantasía"],
+    "genres": ["Infantil", "Fantasia"],
     "publishedDate": "1943-04-06",
     "rating": 5.0,
     "price": 9.99,
@@ -253,7 +253,7 @@
     "publishedDate": "2000-01-01",
     "rating": 4.9,
     "price": 35.0,
-    "coverImage": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=400"
+    "coverImage": "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=400"
   },
   {
     "id": 17,
@@ -269,7 +269,7 @@
     "publishedDate": "1818-01-01",
     "rating": 4.6,
     "price": 10.5,
-    "coverImage": "https://images.unsplash.com/photo-1532012197367-215981d6399b?q=80&w=400"
+    "coverImage": "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=400"
   },
   {
     "id": 18,
