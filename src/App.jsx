@@ -3,17 +3,20 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Hero from "./views/Hero/Hero.jsx";
 import "./App.css";
 import Home from "./views/Home/Home.jsx";
-import Book from "./views/Book/Book.jsx";
+import BookDetail from "./views/BookDetail/BookDetail.jsx";
+import { GlobalProvider } from "./context/GlobalContext.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="" element={<Hero />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/book/:id" element={<Book />} />
-      </Routes>
-    </BrowserRouter>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<Hero />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/book/:id" element={<BookDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 
