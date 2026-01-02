@@ -8,7 +8,7 @@ export const GlobalProvider = ({ children }) => {
   const [books] = useState(booksData);
   const [esModalAbierto, setEsModalAbierto] = useState(false);
   const mostrarModal = () => setEsModalAbierto(!esModalAbierto);
-
+  const [busqueda, setBusqueda] = useState("");
   const [carrito, setCarrito] = useState(() => {
     try {
       const item = localStorage.getItem("carritoKey");
@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   });
   
   return (
-    <GlobalContext.Provider value={{ books, mostrarModal, esModalAbierto, carrito, setCarrito }}>
+    <GlobalContext.Provider value={{ books, mostrarModal, esModalAbierto, carrito, setCarrito, busqueda, setBusqueda }}>
       {children}
     </GlobalContext.Provider>
   );

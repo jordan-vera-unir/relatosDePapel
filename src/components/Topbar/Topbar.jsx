@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 function Topbar() {
 
-  const {carrito, mostrarModal } = useContext(GlobalContext);
+  const {carrito, mostrarModal, busqueda, setBusqueda } = useContext(GlobalContext);
 
   return (
     <header className="topbar">
@@ -48,6 +48,8 @@ function Topbar() {
           type="text"
           className="topbar__search-input"
           placeholder="Buscar por título"
+          value={busqueda} // Valor controlado
+          onChange={(e) => setBusqueda(e.target.value)}
         />
       </div>
 

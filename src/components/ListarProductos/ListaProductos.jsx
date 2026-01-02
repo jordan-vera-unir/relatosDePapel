@@ -1,22 +1,29 @@
+import React, {useContext} from "react";
 import "./ListaProductos.css";
 import { useNavigate } from "react-router";
 import { useCarrito } from "../../hooks/useCarrito";
 import { useBooks } from "../../hooks/useBooks.js";
+import { GlobalContext } from "../../context/GlobalContext";
 
 const ListaProductos = () => {
   const { getAllBooks } = useBooks();
   const productos = getAllBooks();
   const navigate = useNavigate();
   const { agregarCarrito } = useCarrito();
+  const { busqueda } = useContext(GlobalContext);
 
   const carritoKey = "carritoKey";
+  
+  const productosFiltrados = productos.filter((libro) =>
+    libro.title.toLowerCase().includes(busqueda.toLowerCase())
+  );
 
   return (
     <div className="catalogo-container">
       <h1 className="catalogo-titulo">Relatos de Papel</h1>
 
       <div className="grid-libros">
-        {productos.map((libro) => (
+        {productosFiltrados.map((libro) => (
           <div key={libro.id} className="tarjeta-libro">
             <img
               src={libro.coverImage}
