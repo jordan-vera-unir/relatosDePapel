@@ -15,7 +15,6 @@ const SuccessModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        {/* Icono de éxito animado */}
         <div className="modal-content__icon-wrapper">
           <svg
             className="modal-content__icon"

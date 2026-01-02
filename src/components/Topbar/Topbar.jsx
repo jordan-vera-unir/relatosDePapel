@@ -78,7 +78,6 @@ function Topbar() {
             <path d="M17 17h-11v-14h-2" />
             <path d="M6 5l14 1l-1 7h-13" />
           </svg>
-          {/* Badge de contador de items (ejemplo estático) */}
           <span className="topbar__cart-badge">{carrito.length}</span>
         </button>
       </div>
