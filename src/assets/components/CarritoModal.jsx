@@ -3,7 +3,7 @@ import "./CarritoModal.css";
 import { useCarrito } from "../../context/CarritoContext";
 
 const CarritotModal = () => {
-  const { carrito, esModalAbierto, mostrarModal } = useCarrito();
+  const { carrito, esModalAbierto, mostrarModal, eliminarDelCarrito } = useCarrito();
 
   if (!esModalAbierto) return null;
 
@@ -22,6 +22,7 @@ const CarritotModal = () => {
             {carrito.map((item, index) => (
               <li key={index}>
                 {item.title} - ${item.price}
+                <button className="boton-eliminar" onClick={() => eliminarDelCarrito(index)}>🗑️ Eliminar</button>
               </li>
             ))}
           </ul>

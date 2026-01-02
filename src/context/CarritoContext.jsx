@@ -6,14 +6,28 @@ export const CaritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
   const [esModalAbierto, setEsModalAbierto] = useState(false);
   const mostrarModal = () => setEsModalAbierto(!esModalAbierto);
+
   const agregarCarrito = (nuevoLibro) => {
     console.log("agrego al carrito");
     setCarrito((librosAgregados) => [...librosAgregados, nuevoLibro]);
   };
 
+  const eliminarDelCarrito = (indiceABorrar) => {
+    console.log("elimino del carrito");
+    setCarrito((librosActuales) =>
+      librosActuales.filter((_, indice) => indice !== indiceABorrar)
+    );
+  };
+
   return (
     <CarritoContext.Provider
-      value={{ carrito, agregarCarrito, esModalAbierto, mostrarModal }}
+      value={{
+        carrito,
+        agregarCarrito,
+        esModalAbierto,
+        mostrarModal,
+        eliminarDelCarrito
+      }}
     >
       {children}
     </CarritoContext.Provider>
