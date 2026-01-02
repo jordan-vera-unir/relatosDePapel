@@ -14,13 +14,23 @@ export const GlobalProvider = ({ children }) => {
       const item = localStorage.getItem("carritoKey");
       return item ? JSON.parse(item) : [];
     } catch (error) {
-      console.log(error)
+      console.log(error);
       return [];
     }
   });
-  
+
   return (
-    <GlobalContext.Provider value={{ books, mostrarModal, esModalAbierto, carrito, setCarrito, busqueda, setBusqueda }}>
+    <GlobalContext.Provider
+      value={{
+        books,
+        mostrarModal,
+        esModalAbierto,
+        carrito,
+        setCarrito,
+        busqueda,
+        setBusqueda,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );

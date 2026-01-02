@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./ListaProductos.css";
 import { useNavigate } from "react-router";
 import { useCarrito } from "../../hooks/useCarrito";
@@ -13,7 +13,7 @@ const ListaProductos = () => {
   const { busqueda } = useContext(GlobalContext);
 
   const carritoKey = "carritoKey";
-  
+
   const productosFiltrados = productos.filter((libro) =>
     libro.title.toLowerCase().includes(busqueda.toLowerCase())
   );

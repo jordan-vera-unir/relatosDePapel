@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
-export const useCarrito = () => { 
-  
+export const useCarrito = () => {
   const { setCarrito } = useContext(GlobalContext);
 
   const agregarCarrito = (key, libro) => {
@@ -23,7 +22,9 @@ export const useCarrito = () => {
       const datosPrevios = localStorage.getItem(key);
       if (!datosPrevios) return;
       const carritoActual = JSON.parse(datosPrevios);
-      const nuevoCarrito = carritoActual.filter(item => item.idCompra !== libroIdCompra);
+      const nuevoCarrito = carritoActual.filter(
+        (item) => item.idCompra !== libroIdCompra
+      );
       setCarrito(nuevoCarrito);
       localStorage.setItem(key, JSON.stringify(nuevoCarrito));
     } catch (error) {
@@ -33,11 +34,11 @@ export const useCarrito = () => {
 
   const obtenerCarrito = (key) => {
     try {
-       const item = localStorage.getItem(key);
-       return item ? JSON.parse(item) : [];
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : [];
     } catch (error) {
-       console.error(`Error obteniendo el carrito "${key}":`, error);
-       return [];
+      console.error(`Error obteniendo el carrito "${key}":`, error);
+      return [];
     }
   };
 
@@ -52,5 +53,5 @@ export const useCarrito = () => {
     }
   };
 
-  return { agregarCarrito, eliminarLibro, obtenerTamano, obtenerCarrito};
-}
+  return { agregarCarrito, eliminarLibro, obtenerTamano, obtenerCarrito };
+};
